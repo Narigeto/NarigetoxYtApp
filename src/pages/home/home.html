@@ -1,14 +1,41 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="danger">
+    <ion-title>Pointless app by Narigetox</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-item>
+    <ion-label stacked>Enter your channel ID:</ion-label>
+    <ion-input type="text" [(ngModel)]="channelId"></ion-input>
+  </ion-item>
+
+  <button style="margin-top: 10%" full ion-button (click)="searchStatistics()" [disabled]="channelId === ''" color="blue">Get all my information!</button>
+  <ion-list no-padding>
+    <div>
+      <button ion-item *ngFor="let list of stats | async">
+        <h2 style="margin-bottom: 5%">General statistics</h2>
+        <p> Your current view count: {{ list.statistics.viewCount }}</p>
+        <p> Your current comment count: {{ list.statistics.commentCount }}</p>
+        <p> Your current subscriber count: {{ list.statistics.subscriberCount }}</p>
+        <p> Your current video count: {{ list.statistics.videoCount }}</p>
+        <h2 style="margin-top: 5%">Funny stats about you</h2>
+        <p> You created your YT channel on: {{ list.snippet.publishedAt | date:'short' }}</p>
+        <p> Your custom URL is: {{ list.snippet.customUrl }}</p>
+
+      </button>
+    </div>
+  </ion-list>
+
+  <button style="margin-top: 10%" full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search for my Playlists</button>
+  <ion-list no-padding>
+    <button ion-item *ngFor="let list of playlists | async" (click)="openPlaylist(list.id)">
+      <ion-thumbnail item-start>
+        <img [src]="list.snippet.thumbnails.standard.url">
+      </ion-thumbnail>
+      <h2> {{ list.snippet.title }}</h2>
+      <p> Creation date: {{ list.snippet.publishedAt | date:'short' }}</p>
+    </button>
+  </ion-list>
+
 </ion-content>
