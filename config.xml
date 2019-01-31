@@ -86,5 +86,6 @@
     <plugin name="cordova-plugin-youtube-video-player" spec="2.3.0" />
     <allow-navigation href="http://192.100.100.197:8100" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
+    <plugin name="cordova-sms-plugin" spec="1.0.0" />
     <engine name="android" spec="7.1.4" />
 </widget>

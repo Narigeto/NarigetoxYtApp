@@ -10,6 +10,8 @@
     <ion-input type="text" [(ngModel)]="channelId"></ion-input>
   </ion-item>
 
+  <button style="margin-top: 10%" full ion-button (click)="pushToSmsPage()" color="green">I want to send an SMS!</button>
+
   <button style="margin-top: 10%" full ion-button (click)="searchStatistics()" [disabled]="channelId === ''" color="blue">Get all my information!</button>
   <ion-list no-padding>
     <div>

@@ -2,6 +2,7 @@ import { YtProvider } from './../../providers/yt/yt';
 import { Component } from '@angular/core';
 import { NavController, AlertController} from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
+import {SmsPage} from '../sms/sms';
 
 @Component({
   selector: 'page-home',
@@ -46,4 +47,7 @@ export class HomePage {
     })
   }
 
+  pushToSmsPage() {
+    this.navCtrl.push(SmsPage);
+  }
 }
