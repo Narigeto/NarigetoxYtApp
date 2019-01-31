@@ -2,6 +2,7 @@ import { YtProvider } from './../../providers/yt/yt';
 import { Component } from '@angular/core';
 import { NavController, AlertController} from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
+import {ThreejsPage} from '../threejs/threejs';
 
 @Component({
   selector: 'page-home',
@@ -46,4 +47,7 @@ export class HomePage {
     })
   }
 
+  pushToThreeJsPage() {
+    this.navCtrl.push(ThreejsPage);
+  }
 }
