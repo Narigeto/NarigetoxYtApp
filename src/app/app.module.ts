@@ -11,11 +11,13 @@ import { HttpModule } from '@angular/http';
 import { YtProvider } from '../providers/yt/yt';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import {ThreejsPage} from '../pages/threejs/threejs';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ThreejsPage,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ThreejsPage,
   ],
   providers: [
     StatusBar,

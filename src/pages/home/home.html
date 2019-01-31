@@ -10,6 +10,8 @@
     <ion-input type="text" [(ngModel)]="channelId"></ion-input>
   </ion-item>
 
+  <button style="margin-top: 10%; background-color: coral" full ion-button (click)="pushToThreeJsPage()">See an awesome animated 3D object!</button>
+
   <button style="margin-top: 10%" full ion-button (click)="searchStatistics()" [disabled]="channelId === ''" color="blue">Get all my information!</button>
   <ion-list no-padding>
     <div>
