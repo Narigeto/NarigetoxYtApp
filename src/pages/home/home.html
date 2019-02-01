@@ -12,7 +12,7 @@
 
   <button style="margin-top: 10%; background-color: coral" full ion-button (click)="pushToThreeJsPage()">See an awesome animated 3D object!</button>
 
-  <button style="margin-top: 10%" full ion-button (click)="searchStatistics()" [disabled]="channelId === ''" color="blue">Get all my information!</button>
+  <button style="margin-top: 10%" full ion-button (click)="searchStatistics()" [disabled]="channelId === ''" color="blue">Get all my Youtube information!</button>
   <ion-list no-padding>
     <div>
       <button ion-item *ngFor="let list of stats | async">
@@ -29,7 +29,7 @@
     </div>
   </ion-list>
 
-  <button style="margin-top: 10%" full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search for my Playlists</button>
+  <button style="margin-top: 10%" full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search for my Youtube Playlists</button>
   <ion-list no-padding>
     <button ion-item *ngFor="let list of playlists | async" (click)="openPlaylist(list.id)">
       <ion-thumbnail item-start>
