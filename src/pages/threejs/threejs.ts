@@ -12,17 +12,11 @@ export class ThreejsPage {
   @ViewChild('domObj') canvasEl: ElementRef;
 
   private _ELEMENT : any;
-
   private _SCENE;
-
   private _CAMERA;
-
   public renderer;
-
   private _GEOMETRY;
-
   public _MATERIAL;
-
   public _CUBE;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
