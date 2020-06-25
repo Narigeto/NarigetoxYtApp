@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { ArExamplePage } from '../pages/ar-example/ar-example';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -18,6 +19,7 @@ import {ThreejsPage} from '../pages/threejs/threejs';
     MyApp,
     HomePage,
     ThreejsPage,
+    ArExamplePage
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import {ThreejsPage} from '../pages/threejs/threejs';
     MyApp,
     HomePage,
     ThreejsPage,
+    ArExamplePage
   ],
   providers: [
     StatusBar,
